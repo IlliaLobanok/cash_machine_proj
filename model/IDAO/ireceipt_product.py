@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
-from typing import Union, Optional, List
-from entities import ReceiptHasProduct
+from typing import List
+from model.entities import ReceiptHasProduct
 
 
 class IReceipt_Product_DAO(ABC):

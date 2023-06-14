@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import Union, Optional, List
-from entities import Product
+from model.entities import Product
 
 
 class IProduct_DAO(ABC):

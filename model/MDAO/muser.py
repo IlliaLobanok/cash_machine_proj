@@ -1,5 +1,5 @@
-from IDAO import IUser_DAO
-from entities import User
+from model.IDAO import IUser_DAO
+from model.entities import User
 from typing import Union, Optional, List
 
 

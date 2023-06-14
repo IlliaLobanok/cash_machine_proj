@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
-from typing import Union, Optional, List
-from entities import Role
+from typing import Union, List
+from model.entities import Role
 
 
 class IRole_DAO(ABC):

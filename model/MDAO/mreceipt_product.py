@@ -1,6 +1,6 @@
-from IDAO import IReceipt_Product_DAO
-from entities import ReceiptHasProduct
-from typing import Union, Optional, List
+from model.IDAO import IReceipt_Product_DAO
+from model.entities import ReceiptHasProduct
+from typing import List
 
 
 class MReceipt_Product_DAO(IReceipt_Product_DAO):

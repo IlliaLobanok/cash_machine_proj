@@ -1,5 +1,5 @@
-from IDAO import IProduct_DAO
-from entities import Product
+from model.IDAO import IProduct_DAO
+from model.entities import Product
 from typing import Union, Optional, List
 
 

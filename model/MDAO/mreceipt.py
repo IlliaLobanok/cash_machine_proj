@@ -1,5 +1,5 @@
-from IDAO import IReceipt_DAO
-from entities import Receipt
+from model.IDAO import IReceipt_DAO
+from model.entities import Receipt
 from typing import Union, Optional, List
 
 

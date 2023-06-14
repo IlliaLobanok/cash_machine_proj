@@ -1,6 +1,6 @@
-from IDAO import IRole_DAO
-from entities import Role
-from typing import Union, Optional, List
+from model.IDAO import IRole_DAO
+from model.entities import Role
+from typing import Union, List
 
 
 class MRole_DAO(IRole_DAO):

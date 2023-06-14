@@ -1,5 +1,4 @@
-import mysql.connector
-from MDAO import MProduct_DAO, MReceipt_DAO, MReceipt_Product_DAO, MRole_DAO, MUser_DAO
+from model import MProduct_DAO, MReceipt_DAO, MReceipt_Product_DAO, MRole_DAO, MUser_DAO
 
 # MProduct_DAO.update_product("груша", n_quantity=40.56)
 products = MProduct_DAO.read_all_product()
