@@ -1,1 +1,0 @@
-from cashier import Cashier

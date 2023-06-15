@@ -1,6 +1,7 @@
-from entities import *
-from MDAO import *
+from .entities import *
+from .MDAO import *
 from typing import Optional
+import hashlib
 
 
 def update_avl_quantity(product_id: int, quantity_decrement: float):
@@ -23,3 +24,8 @@ def find_receipt_product(receipt_id: int, product_id: int) -> Optional[ReceiptHa
         if receipt_product.product_id == product_id:
             return receipt_product
     return None
+
+
+def hash_password(password: str) -> str:
+    hashed = hashlib.sha256(password.encode()).hexdigest()
+    return hashed

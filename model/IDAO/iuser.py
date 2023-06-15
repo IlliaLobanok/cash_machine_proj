@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
-from typing import Union, Optional
+from typing import Union, Optional, List
+from model.entities import User
 
 
 class IUser_DAO(ABC):
@@ -16,7 +17,7 @@ class IUser_DAO(ABC):
 
     @staticmethod
     @abstractmethod
-    def read_user(search_value: Union[str, int]):
+    def read_user(search_value: Union[str, int]) -> Optional[User]:
         """
         search users by id and name
         :param search_value: int, str;
@@ -24,7 +25,7 @@ class IUser_DAO(ABC):
 
     @staticmethod
     @abstractmethod
-    def read_all_user():
+    def read_all_user() -> List[User]:
         """
         select all users
         """

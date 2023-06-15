@@ -69,7 +69,7 @@ class MUser_DAO(IUser_DAO):
             query += query_name
             i += 1
         if n_password is not None:
-            query_password = f'user_password = {n_password} '
+            query_password = f'user_password = "{n_password}" '
             if i > 0:
                 query = query + ', ' + query_password
             else:
