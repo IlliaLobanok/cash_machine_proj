@@ -1,12 +1,5 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>{% block title %} Welcome to FlaskBlog {% endblock %}</h1>
-    {% for product in products %}
-        <a href="{{ url_for('product', product_id=product.id) }}">
-            <h2>{{ product.name }}</h2>
-        </a>
-        <span class="badge badge-primary">{{ product.price, product.quantity }}</span>
-        <hr>
-    {% endfor %}
+    <h1>{% block title %} Welcome to CashMachine Project {% endblock %}</h1>
 {% endblock %}

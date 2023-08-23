@@ -1,4 +1,5 @@
-from command import Command, EditReceiptProductCommand
+from ..command import Command
+from .edit_receipt_product import EditReceiptProductCommand
 from model import MProduct_DAO, MReceipt_Product_DAO, update_current_sum, update_avl_quantity
 from typing import Optional, Union
 
@@ -15,7 +16,7 @@ class AddReceiptProductCommand(Command):
             print(f"\nError: not enough product {found_product.name}\n")
             return None
         found_receipt_product = MReceipt_Product_DAO.read_receipt_product(self.receipt_id)
-        if found_receipt_product[0] is not None:
+        if found_receipt_product is not None:
             for receipt_product in found_receipt_product:
                 if receipt_product.product_id == found_product.id:
                     edit_command = EditReceiptProductCommand(self.receipt_id, self.product_value,

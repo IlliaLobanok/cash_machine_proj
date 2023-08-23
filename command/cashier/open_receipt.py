@@ -1,4 +1,4 @@
-from command import Command
+from ..command import Command
 from model import MReceipt_DAO
 from typing import Optional
 

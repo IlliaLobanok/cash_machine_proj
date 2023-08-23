@@ -1,4 +1,5 @@
 from model import *
+from view import *
 from flask import Flask, render_template, request, url_for, flash, redirect, session
 
 
@@ -19,6 +20,7 @@ def login():
             else:
                 if hash_password(user_password) == found_user.password:
                     session["user_id"] = found_user.id
+                    session["user_name"] = found_user.name
                     session["role_id"] = found_user.role_id
                     roles = MRole_DAO.read_all_roles()
                     cashier_role_id = 0
@@ -26,7 +28,7 @@ def login():
                         if role.name == "cashier":
                             cashier_role_id = role.id
                     if found_user.role_id == cashier_role_id:
-                        redirect(url_for("index_cashier"))
+                        return redirect(url_for("index_cashier"))
                 else:
                     flash("The password is not correct.")
 

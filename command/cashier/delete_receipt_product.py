@@ -1,4 +1,4 @@
-from command import Command
+from ..command import Command
 from model import MProduct_DAO, MReceipt_Product_DAO, update_current_sum, update_avl_quantity, find_receipt_product
 from typing import Optional, Union
 
