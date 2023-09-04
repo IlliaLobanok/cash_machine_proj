@@ -6,6 +6,8 @@ planned functions are:
     - run X- and Z-reports
     - add, edit, delete user
     - distribution of functions among different user roles
+    - covering everything in tests
+    - migrating to Django and more advanced DB
 
 for correct running:
     1. use

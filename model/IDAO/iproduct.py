@@ -7,12 +7,13 @@ class IProduct_DAO(ABC):
 
     @staticmethod
     @abstractmethod
-    def create_product(name: str, price: float, quantity: Optional[float] = 0.0):
+    def create_product(name: str, price: float, quantity: Optional[float] = 0.0, id: Optional[int] = None):
         """
         insert new product
         :param name: str;
         :param price: float;
         :param quantity: float;
+        :param id: int;
         """
 
     @staticmethod

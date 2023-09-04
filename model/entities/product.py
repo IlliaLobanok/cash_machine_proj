@@ -7,6 +7,12 @@ class Product:
         self._price = float(price)
         self._quantity = float(quantity)
 
+    def __eq__(self, other):
+        if isinstance(other, Product):
+            return self._name == other._name and self._price == other._price and self._quantity == other._quantity
+        else:
+            return False
+
     @property
     def id(self) -> int:
         return self._id

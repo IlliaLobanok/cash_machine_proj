@@ -11,10 +11,14 @@ class MProduct_DAO(IProduct_DAO):
         MProduct_DAO.connection_manager = connection_manager
 
     @staticmethod
-    def create_product(name: str, price: float, quantity: Optional[float] = 0.0):
+    def create_product(name: str, price: float, quantity: Optional[float] = 0.0, id: Optional[int] = None):
         connection = MProduct_DAO.connection_manager.get_connection()
-        query = f'INSERT INTO products (product_name, product_price, avl_quantity) ' \
+        if id is None:
+            query = f'INSERT INTO products (product_name, product_price, avl_quantity) ' \
                 f'VALUES ("{name}", {price}, {quantity});'
+        else:
+            query = f'INSERT INTO products (product_ID, product_name, product_price, avl_quantity) ' \
+                    f'VALUES ({id}, "{name}", {price}, {quantity});'
         cursor = connection.cursor(buffered=True)
         try:
             cursor.execute(query)
